@@ -9,7 +9,7 @@ build:
     # Sets the go workspace and places you package
     # at the right place in the workspace tree
     - wercker/setup-go-workspace:
-       package-dir: github.com/krujos/usagereport-plugin
+       package-dir: github.com/mchada/usagereport-plugin
 
     - script:
         name: Get dependencies
@@ -38,7 +38,7 @@ build:
          wget https://cli.run.pivotal.io/stable\?release\=linux64-binary\&source\=github -O cli.tgz
          tar -xvf cli.tgz
          chmod +x ./cf
-         ./cf api api.run.pivotal.io
+         ./cf api https://api.nova.pez.rocks
          ./cf auth $cfuser "$cfpass"
          ./cf target -s $cfspace -o $cforg
          ls -al
