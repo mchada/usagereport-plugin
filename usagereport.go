@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/cloudfoundry/cli/plugin"
-	"github.com/krujos/usagereport-plugin/apihelper"
+	"github.com/mchada/usagereport-plugin/apihelper"
 )
 
 //UsageReportCmd the plugin
